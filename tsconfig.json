@@ -1,0 +1,29 @@
+{
+	"rootDir": "./src",
+	"include": [
+		"src/**/*"
+	],
+	"compilerOptions": {
+		"module": "esnext",
+		"target": "ES6",
+		"lib": [
+			"dom",
+			"esnext"
+		],
+		"baseUrl": "src",
+		"resolveJsonModule": true,
+		"importHelpers": true,
+		"declaration": true,
+		"sourceMap": true,
+		"strict": true,
+		"strictNullChecks": false,
+		"noImplicitAny": false,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"moduleResolution": "node",
+		"jsx": "preserve",
+		"esModuleInterop": true
+	}
+}

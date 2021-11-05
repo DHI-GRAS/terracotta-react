@@ -1,0 +1,58 @@
+{
+	"version": "1.0.0",
+	"license": "MIT",
+	"main": "dist/index.js",
+	"name": "@dhi-gras/terracotta-react",
+	"author": "DHI",
+	"module": "dist/terracotta-react.esm.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DHI-GRAS/terracotta-react.git"
+	},
+	"typings": "dist/index.d.ts",
+	"files": [
+		"dist",
+		"src"
+	],
+	"scripts": {
+		"start": "tsdx watch",
+		"build": "tsdx build",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"prepare": "yarn build",
+		"semantic-release": "npx semantic-release"
+	},
+	"engines": {
+		"node": ">=10"
+	},
+	"devDependencies": {
+		"@dhi-gras/eslint-config-react": "^2.0.0",
+		"@dhi-gras/eslint-config-ts": "^2.0.4",
+		"@semantic-release/changelog": "^6.0.1",
+		"@semantic-release/commit-analyzer": "^9.0.1",
+		"@semantic-release/git": "^10.0.1",
+		"@semantic-release/npm": "^8.0.3",
+		"@semantic-release/release-notes-generator": "^10.0.2",
+		"@types/react": "^17.0.34",
+		"@types/react-dom": "^17.0.11",
+		"@typescript-eslint/eslint-plugin": "^5.3.0",
+		"eslint": "^7.21.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-eslint-comments": "^3.2.0",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-json": "^3.1.0",
+		"eslint-plugin-jsx-a11y": "^6.4.1",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-radar": "^0.2.1",
+		"eslint-plugin-react": "^7.26.1",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"prettier": "^2.4.1",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"tsdx": "^0.14.1",
+		"typescript": "^4.4.4"
+	},
+	"peerDependencies": {
+		"react": ">=17"
+	}
+}
