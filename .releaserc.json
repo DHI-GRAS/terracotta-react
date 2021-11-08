@@ -1,6 +1,6 @@
 {
 	"branches": [
-		"master"
+		"main"
 	],
 	"repositoryUrl": "https://github.com/DHI-GRAS/terracotta-react",
 	"plugins": [
