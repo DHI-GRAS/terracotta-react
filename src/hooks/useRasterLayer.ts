@@ -2,11 +2,11 @@ import { BitmapLayer } from '@deck.gl/layers'
 import { TileLayer } from '@deck.gl/geo-layers'
 import { TileLayerProps } from '@deck.gl/geo-layers/src/tile-layer/tile-layer'
 
-type Payload<T> = TileLayerProps<T>
+export type RasterLayer<T> = TileLayerProps<T>
 
 const useRasterLayer = ({
 	...otherProps
-}: Payload<unknown>): TileLayer<unknown> | undefined =>
+}: RasterLayer<unknown>): TileLayer<unknown> | undefined =>
 	new TileLayer({
 		minZoom: 0,
 		pickable: true,

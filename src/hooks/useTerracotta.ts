@@ -6,7 +6,7 @@ import { TileLayerProps } from '@deck.gl/geo-layers/src/tile-layer/tile-layer'
 
 type Payload<T> = TileLayerProps<T>
 
-interface Props<T> extends Payload<T> {
+export interface TerracottaProps<T> extends Payload<T> {
 	id: string
 	url: string
 	datasets?: Record<string, string | boolean | number>[]
@@ -22,7 +22,7 @@ const useTerracotta = ({
 	type = 'singleband',
 	queryString = undefined,
 	...otherProps
-}: Props<unknown>): TileLayer<string>[] | undefined => {
+}: TerracottaProps<unknown>): TileLayer<string>[] | undefined => {
 	if (datasets?.length > 0) {
 		return datasets.map((dataset, i) => {
 			let datasetCopy = { ...dataset }
