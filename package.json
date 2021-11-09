@@ -27,6 +27,7 @@
 	},
 	"dependencies": {
 		"@danmarshall/deckgl-typings": "^4.9.8",
+		"@deck.gl/core": "^8.6.3",
 		"@deck.gl/geo-layers": "^8.6.3",
 		"@deck.gl/layers": "^8.6.3"
 	},
@@ -59,7 +60,7 @@
 		"typescript": "^4.4.4"
 	},
 	"peerDependencies": {
-		"deck.gl": "~8.6.3",
+		"deck.gl": ">=8.6.0",
 		"react": ">=17",
 		"react-dom": ">=17"
 	}
