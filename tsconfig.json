@@ -3,6 +3,10 @@
 	"include": [
 		"src/**/*"
 	],
+	"exclude": [
+		"node_modules",
+		".yarn"
+	],
 	"compilerOptions": {
 		"module": "esnext",
 		"target": "ES6",
@@ -10,6 +14,7 @@
 			"dom",
 			"esnext"
 		],
+		"outDir": "dist",
 		"baseUrl": "src",
 		"resolveJsonModule": true,
 		"importHelpers": true,

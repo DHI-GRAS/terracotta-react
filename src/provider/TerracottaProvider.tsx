@@ -6,7 +6,7 @@ import React, {
 	useEffect,
 	useCallback,
 } from 'react'
-import getData from 'utils/getData'
+import getData from '../utils/getData'
 import { Key } from './types'
 
 interface TerracottaContextProviderValues {
@@ -40,8 +40,7 @@ const TerracottaContextProvider: FC<Props> = ({ children, host }) => {
 				host,
 				endpoint: '/keys',
 			})
-
-			setKeys(response as Key[])
+			setKeys(response.keys as Key[])
 		} catch (err) {
 			console.error(err)
 		} finally {

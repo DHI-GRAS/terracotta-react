@@ -1,4 +1,4 @@
-interface GetDataPayload {
+export interface GetDataPayload {
 	host: string
 	endpoint: string
 	params?: Record<string, string | boolean | number>
@@ -10,7 +10,7 @@ export default async ({
 	endpoint,
 	params = {},
 	additionalHeaders = {},
-}: GetDataPayload): Promise<unknown> => {
+}: GetDataPayload): Promise<any> => {
 	const callUrl = `${host}${endpoint}`
 	const queryParameters = Object.keys(params)
 		.map((key, i) => `${i === 0 ? '?' : '&'}${key}=${String(params[key])}`)
