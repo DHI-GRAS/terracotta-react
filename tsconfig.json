@@ -1,12 +1,4 @@
 {
-	"rootDir": "./src",
-	"include": [
-		"src/**/*"
-	],
-	"exclude": [
-		"node_modules",
-		".yarn"
-	],
 	"compilerOptions": {
 		"module": "esnext",
 		"target": "ES6",
