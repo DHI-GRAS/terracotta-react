@@ -1,6 +1,6 @@
 # Main provider hook
 
-The package provides the `useTerracotta` hooks that serves the purpose of providing the TerracottaContext values.
+The package provides the `useTerracotta` hook that serves the purpose of providing the TerracottaContext values.
 
 ## useTerracotta
 
@@ -18,11 +18,11 @@ const Component: FC = () => {
 
 ```
 
-#### keys
+- keys
 
 An object respective to the response received from the `/keys` endpoint of the providede terracotta host.
 
-Example
+Example: 
 ```
 [
 	{
@@ -35,7 +35,7 @@ Example
 ]
 ```
 
-#### isLoading
+- isLoading
 
 A `boolean` value that represents the loading state of the provider. The value changes to `true` when making requests to various terracotta endpoints.
 
@@ -100,20 +100,20 @@ const terracotta = useTerracottaLayer({
 
 This is a list of specific props that are related mainly to Terracotta. The rest of the props passed are the same as for the TileLayer and will be applied to the [TileLayer](https://deck.gl/docs/api-reference/geo-layers/tile-layer). 
 
-#### url*
+- url*
 The terracotta instance url without the ending "/".
 
-#### id*
+- id*
 The unique identifier for the given layer.
 
-#### datasets
+- datasets
 This represents the dataset/s that are to be displayed on the map as TileLayers.
 
-#### type
+- type
 
 The type is related to the type of data that the user would like to render. The options available are 'singleband' and 'rgb'. You can read more about the differences in the [official documentation](https://terracotta-python.readthedocs.io/en/latest/concepts.html?highlight=singleband#data-model).
 
-#### queryString
+- queryString
 
 The queryString is used to specify the ranges you would like to see for the Red, Green or Blue band through the r_range, b_range, g_range query parameters. 
 
