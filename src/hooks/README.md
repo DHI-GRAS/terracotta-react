@@ -1,4 +1,46 @@
-# Deck.gl hooks
+# Hooks
+1. Main provider hook
+
+The package provides the `useTerracotta` hooks that serves the purpose of providing the TerracottaContext values.
+
+## useTerracotta
+
+In order to use the provided hook, make sure that the component that it is being used in is wrapped in the TerracottaContextProvider.
+
+### Usage
+
+```
+import React, { FC } from "react";
+import { useTerracotta } from "@dhi-gras/terracotta-react";
+
+const Component: FC = () => {
+	const { keys, isLoading } = useTerracotta()
+}
+
+```
+
+#### keys
+
+An object respective to the response received from the `/keys` endpoint of the providede terracotta host.
+
+Example
+```
+[
+	{
+		"key": "keyName",
+	},
+	{
+		"key": "keyName",
+	},
+	...
+]
+```
+
+#### isLoading
+
+A `boolean` value that represents the loading state of the provider. The value changes to `true` when making requests to various terracotta endpoints.
+
+2. Deck.gl hooks
 
 This package includes a few helper functions that can be used during the implementation of Terracotta and Deck.gl. This readme file should give you an overview of what hooks are available and how to use them.
 
