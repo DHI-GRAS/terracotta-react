@@ -30,7 +30,9 @@ jobs:
         run: yarn lint
 
       - name: Semantic release
-        run: yarn run semantic-release
+        run: |
+          cd packages/terracotta-react
+          yarn run semantic-release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

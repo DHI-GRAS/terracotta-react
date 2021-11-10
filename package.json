@@ -1,37 +1,19 @@
 {
 	"version": "1.0.0",
-	"license": "MIT",
-	"main": "dist/index.js",
-	"name": "@dhi-gras/terracotta-react",
+	"name": "terracotta-react-repo",
 	"author": "DHI",
-	"module": "dist/terracotta-react.esm.js",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/DHI-GRAS/terracotta-react.git"
-	},
-	"typings": "dist/index.d.ts",
-	"files": [
-		"dist",
-		"src"
-	],
 	"scripts": {
 		"start": "tsdx watch",
 		"build": "tsdx build",
 		"lint": "eslint .",
-		"lint:fix": "eslint . --fix",
-		"prepare": "yarn build",
-		"preinstall": "rm -rf node_modules",
-		"semantic-release": "npx semantic-release"
+		"lint:fix": "eslint . --fix"
 	},
 	"engines": {
 		"node": ">=10"
 	},
-	"dependencies": {
-		"@danmarshall/deckgl-typings": "^4.9.8",
-		"@deck.gl/core": "^8.6.3",
-		"@deck.gl/geo-layers": "^8.6.3",
-		"@deck.gl/layers": "^8.6.3"
-	},
+	"workspaces": [
+		"./packages/*"
+	],
 	"devDependencies": {
 		"@babel/preset-env": "^7.16.0",
 		"@babel/preset-react": "^7.16.0",
@@ -62,10 +44,5 @@
 		"react-dom": "^17.0.2",
 		"tsdx": "^0.14.1",
 		"typescript": "^4.4.4"
-	},
-	"peerDependencies": {
-		"deck.gl": ">=8.6.0",
-		"react": ">=17",
-		"react-dom": ">=17"
 	}
 }
