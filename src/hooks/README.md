@@ -1,5 +1,4 @@
-# Hooks
-1. Main provider hook
+# Main provider hook
 
 The package provides the `useTerracotta` hooks that serves the purpose of providing the TerracottaContext values.
 
@@ -40,7 +39,7 @@ Example
 
 A `boolean` value that represents the loading state of the provider. The value changes to `true` when making requests to various terracotta endpoints.
 
-2. Deck.gl hooks
+# Deck.gl hooks
 
 This package includes a few helper functions that can be used during the implementation of Terracotta and Deck.gl. This readme file should give you an overview of what hooks are available and how to use them.
 
