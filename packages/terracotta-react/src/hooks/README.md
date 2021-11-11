@@ -91,7 +91,7 @@ const terracotta = useTerracottaLayer({
 	url: https://www.terracotta-deployment.com,
 	datasets: [ ...datasets ],
 	type: "singleband",
-	queryString: "colormap=binary&stretch_range=[0,1]" //dependable on the type of data
+	queryString: "colormap=binary&stretch_range=[0,1]" // Depends on the type of data
 	...otherTileLayerProps
 })
 
