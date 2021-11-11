@@ -1,11 +1,10 @@
 {
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "MIT",
 	"main": "dist/index.js",
 	"name": "@dhi-gras/terracotta-react",
 	"author": "DHI",
 	"module": "dist/terracotta-react.esm.js",
-	"private": "false",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/DHI-GRAS/terracotta-react.git"
