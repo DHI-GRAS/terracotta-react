@@ -98,7 +98,7 @@ const terracotta = useTerracottaLayer({
 ```
 ### Props
 
-This is a list of specific props that are related mainly to Terracotta. The rest of the props passed are the same as for the TileLayer and will be applied to the [TileLayer](https://deck.gl/docs/api-reference/geo-layers/tile-layer). 
+List of specific props related mainly to Terracotta. The rest of the props passed are the same as for the TileLayer and will be applied to the [TileLayer](https://deck.gl/docs/api-reference/geo-layers/tile-layer). 
 
 #### `url`*
 The terracotta instance url without the ending "/".
