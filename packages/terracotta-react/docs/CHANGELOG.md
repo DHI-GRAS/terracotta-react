@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/DHI-GRAS/terracotta-react/compare/v1.0.1...v1.0.2) (2021-11-11)
+
+
+### Bug Fixes
+
+* **semver:** Tryout 2 ([da81d21](https://github.com/DHI-GRAS/terracotta-react/commit/da81d21fd2d4b22871572651cf4d822635cd3103))
+
 ## [1.0.1](https://github.com/DHI-GRAS/terracotta-react/compare/v1.0.0...v1.0.1) (2021-11-11)
 
 
