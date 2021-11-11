@@ -20,7 +20,7 @@ const Component: FC = () => {
 
 #### `keys`
 
-An object respective to the response received from the `/keys` endpoint of the providede terracotta host.
+An object respective to the response received from the `/keys` endpoint of the provided terracotta host.
 
 Example: 
 ```
