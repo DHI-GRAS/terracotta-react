@@ -1,8 +1,4 @@
 {
-	"rootDir": "./src",
-	"include": [
-		"src/**/*"
-	],
 	"compilerOptions": {
 		"module": "esnext",
 		"target": "ES6",
@@ -10,6 +6,7 @@
 			"dom",
 			"esnext"
 		],
+		"outDir": "dist",
 		"baseUrl": "src",
 		"resolveJsonModule": true,
 		"importHelpers": true,
