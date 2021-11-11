@@ -1,7 +1,3 @@
-<p align="center">
-  <a href="https://www.dhigroup.com/" rel="noopener" target="_blank"><img width="150" src="https://grasdatastorage.blob.core.windows.net/images/DHI_Logo_Blue.png" alt="DHI logo"></a></p>
-</p>
-
 <h1 align="center">@dhi-gras/terracotta-react</h1>
 <div align="center">
 
@@ -9,7 +5,7 @@
 [![semantic-release](https://img.shields.io/badge/semantic-release-e10079.svg?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 </div>
 
-React library tailored for implementing Terracotta through the provided hooks. 
+React library tailored for implementing [Terracotta]('https://terracotta-python.readthedocs.io/en/latest/index.html') through the provided hooks. 
 
 This package is created using [TypeScript](https://www.typescriptlang.org/) and [MaterialUI](https://material-ui.com/), built using [Yarn](https://classic.yarnpkg.com/en/) and bundled using [TSDX](https://tsdx.io/).
 
@@ -71,7 +67,7 @@ A `boolean` value that represents the loading state of the provider. The value c
 
 #### `getDatasets`
 
-A method that returns a Promise. It can take in an argument containing the query parameters used for filtering through the available datasets from the provided Terracotta host.
+A method that returns a Promise by making a call to the `/datasets` endpoint. It can take in an argument containing the query parameters used for filtering through the available datasets from the provided Terracotta host.
 
 For example, in the following call, the method will try to query the terracotta datasets for the `project_id: 2` including the `type: preprocess` and `type: postprocess` with that id.
 
