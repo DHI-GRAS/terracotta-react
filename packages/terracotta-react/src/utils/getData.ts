@@ -5,6 +5,7 @@ export interface GetDataPayload {
 	additionalHeaders?: Record<string, string>
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-constraint
 const getData = async <T extends unknown>({
 	host,
 	endpoint,
@@ -20,6 +21,5 @@ const getData = async <T extends unknown>({
 	})
 	return response.json()
 }
-
 
 export default getData
