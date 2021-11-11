@@ -4,7 +4,6 @@
 	"main": "dist/index.js",
 	"name": "@dhi-gras/terracotta-react",
 	"author": "DHI",
-	"private": "false",
 	"module": "dist/terracotta-react.esm.js",
 	"repository": {
 		"type": "git",
