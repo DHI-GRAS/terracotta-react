@@ -42,7 +42,7 @@ const TerracottaContextProvider: FC<Props> = ({ children, host }) => {
 			})
 			setKeys(response.keys as Key[])
 		} catch (err) {
-			console.error(err)
+			console.error(err) // eslint-disable-line no-console
 		} finally {
 			setIsLoading(false)
 		}
