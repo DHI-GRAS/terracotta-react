@@ -1,4 +1,7 @@
+<br />
 <h1 align="center">@dhi-gras/terracotta-react</h1>
+<br />
+
 <div align="center">
 
 [![Latest](https://img.shields.io/npm/v/@dhi-gras/terracotta-react/latest)](https://www.npmjs.com/package/@dhi-gras/terracotta-react)
