@@ -1,11 +1,17 @@
 import { useContext } from 'react'
 import { TerracottaContext } from '../provider/TerracottaProvider'
-import { Key, GetDatasetsPayload } from '../provider/types'
+import {
+	Key,
+	GetDatasetsPayload,
+	ResponseTypeDatasets,
+} from '../provider/types'
 
 export interface UseTerracottaReturn {
 	keys: Key[] | undefined
 	isLoading: boolean
-	getDatasets: (p: GetDatasetsPayload | undefined) => Promise<void>
+	getDatasets: (
+		p: GetDatasetsPayload | undefined,
+	) => Promise<ResponseTypeDatasets>
 }
 
 const useTerracotta = (): UseTerracottaReturn => {

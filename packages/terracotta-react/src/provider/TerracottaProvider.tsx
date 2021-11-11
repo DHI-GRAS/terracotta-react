@@ -22,7 +22,9 @@ interface TerracottaContextProviderValues {
 	actions: {
 		setKeys: (k: Key[] | undefined) => void
 		setIsLoading: (l: boolean) => void
-		getDatasets: (p: GetDatasetsPayload | undefined) => Promise<void>
+		getDatasets: (
+			p: GetDatasetsPayload | undefined,
+		) => Promise<ResponseTypeDatasets>
 	}
 }
 
@@ -58,12 +60,11 @@ const TerracottaContextProvider: FC<Props> = ({ children, host }) => {
 		async (payload: GetDatasetsPayload | undefined) => {
 			try {
 				setIsLoading(true)
-				const response = await getData<ResponseTypeDatasets>({
+				return await getData<ResponseTypeDatasets>({
 					host,
 					endpoint: '/datasets',
 					params: payload,
 				})
-				console.log(response)
 			} catch (err) {
 				throw Error(String(err))
 				// console.error(err) // eslint-disable-line no-console
