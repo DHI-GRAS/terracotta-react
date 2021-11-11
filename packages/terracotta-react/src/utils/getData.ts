@@ -5,12 +5,12 @@ export interface GetDataPayload {
 	additionalHeaders?: Record<string, string>
 }
 
-export default async ({
+const getData = async <T extends unknown>({
 	host,
 	endpoint,
 	params = {},
 	additionalHeaders = {},
-}: GetDataPayload): Promise<any> => {
+}: GetDataPayload): Promise<T> => {
 	const callUrl = `${host}${endpoint}`
 	const queryParameters = Object.keys(params)
 		.map((key, i) => `${i === 0 ? '?' : '&'}${key}=${String(params[key])}`)
@@ -20,3 +20,6 @@ export default async ({
 	})
 	return response.json()
 }
+
+
+export default getData

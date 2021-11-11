@@ -7,7 +7,7 @@ import React, {
 	useCallback,
 } from 'react'
 import getData from '../utils/getData'
-import { Key } from './types'
+import { Key, ResponseTypeKeys } from './types'
 
 interface TerracottaContextProviderValues {
 	state: {
@@ -36,7 +36,7 @@ const TerracottaContextProvider: FC<Props> = ({ children, host }) => {
 	const handleKeys = useCallback(async () => {
 		try {
 			setIsLoading(true)
-			const response = await getData({
+			const response = await getData<ResponseTypeKeys>({
 				host,
 				endpoint: '/keys',
 			})
