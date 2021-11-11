@@ -1,3 +1,3 @@
 # terracotta-react
 
-Terracotta wrapper tailored for React
+Terracotta wrapper tailored for React 
