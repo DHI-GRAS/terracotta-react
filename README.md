@@ -15,7 +15,7 @@ This package is created using [TypeScript](https://www.typescriptlang.org/) and 
 
 ## Prerequisites
 
-Check the peerDependencies of the [`terracotta-react` package](./packages/terracotta-react).
+Check the peerDependencies of the [terracotta-react package](./packages/terracotta-react).
 
 ## Usage
 
@@ -29,7 +29,9 @@ yarn add @dhi-gras/terracotta-provider
 npm install @dhi-gras/terracotta-provider
 ```
 
-Wrap your app with the provider
+# TerracottaContextProvider
+
+The context provider aims to offer a few state values and methods to ease the implementation of Terracotta in your project. 
 
 ```
 import React, { FC } from "react"
@@ -45,25 +47,6 @@ const App: FC = () => (
 
 export default App
 ```
-
-And use the hook within your app
-
-```
-import React, { FC } from "react"
-import { useTerracotta } from "@dhi-gras/terracotta-react"
-
-const AppScreen: FC = () => {
-	const { keys, isLoading, getDatasets } = useTerracotta()
-
-	return null;
-}
-
-export default AppScreen
-```
-
-# TerracottaContextProvider
-
-The context provider aims to offer a few state values and methods to ease the implementation of Terracotta in your project. 
 
 #### `keys`
 
@@ -112,7 +95,24 @@ const handleDatasets = async () => {
 }
 ```
 
-Note: All of the above methods and values can be accessed through the `useTerracotta` hook.
+# Hooks
+
+## useTerracotta
+
+The hook helps you get the values of the context state through your react tree.
+
+```
+import React, { FC } from "react"
+import { useTerracotta } from "@dhi-gras/terracotta-react"
+
+const AppScreen: FC = () => {
+	const { keys, isLoading, getDatasets } = useTerracotta()
+
+	return null;
+}
+
+export default AppScreen
+```
 
 # Deck.gl hooks
 
