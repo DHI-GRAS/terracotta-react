@@ -1,12 +1,14 @@
 <br />
 <h1 align="center">@dhi-gras/terracotta-react</h1>
-<br />
 
 <div align="center">
 
 [![Latest](https://img.shields.io/npm/v/@dhi-gras/terracotta-react/latest)](https://www.npmjs.com/package/@dhi-gras/terracotta-react)
 [![semantic-release](https://img.shields.io/badge/semantic-release-e10079.svg?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 </div>
+<br />
+
+# Docs
 
 React library tailored for implementing [Terracotta]('https://terracotta-python.readthedocs.io/en/latest/index.html') through the provided hooks. 
 
@@ -46,6 +48,27 @@ const App: FC = () => (
 
 export default App
 ```
+
+# Hooks
+
+## useTerracotta
+
+The hook helps you get the values of the context state through your react tree.
+
+```
+import React, { FC } from "react"
+import { useTerracotta } from "@dhi-gras/terracotta-react"
+
+const AppScreen: FC = () => {
+	const { keys, isLoading, getDatasets } = useTerracotta()
+
+	return null;
+}
+
+export default AppScreen
+```
+
+### Provided state values and methods
 
 #### `keys`
 
@@ -92,25 +115,6 @@ const handleDatasets = async () => {
 		console.error(err)
 	}
 }
-```
-
-# Hooks
-
-## useTerracotta
-
-The hook helps you get the values of the context state through your react tree.
-
-```
-import React, { FC } from "react"
-import { useTerracotta } from "@dhi-gras/terracotta-react"
-
-const AppScreen: FC = () => {
-	const { keys, isLoading, getDatasets } = useTerracotta()
-
-	return null;
-}
-
-export default AppScreen
 ```
 
 # Deck.gl hooks
