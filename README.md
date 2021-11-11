@@ -11,7 +11,7 @@ This package is created using [TypeScript](https://www.typescriptlang.org/) and 
 
 ## Prerequisites
 
-Check the peerDependencies of the [terracotta-react package](./packages/terracotta-react).
+Check the `peerDependencies` of the [terracotta-react package](./packages/terracotta-react).
 
 ## Usage
 
