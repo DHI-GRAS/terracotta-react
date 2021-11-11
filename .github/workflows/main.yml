@@ -32,6 +32,7 @@ jobs:
       - name: Semantic release
         run: |
           cd packages/terracotta-react
+          npm config set access public
           yarn run semantic-release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
