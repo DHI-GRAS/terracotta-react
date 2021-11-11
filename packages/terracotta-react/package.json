@@ -5,6 +5,7 @@
 	"name": "@dhi-gras/terracotta-react",
 	"author": "DHI",
 	"module": "dist/terracotta-react.esm.js",
+	"private": "false",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/DHI-GRAS/terracotta-react.git"

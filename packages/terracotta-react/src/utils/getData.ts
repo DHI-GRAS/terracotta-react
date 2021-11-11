@@ -1,7 +1,9 @@
+import { DatasetKeyValue } from '../provider/types'
+
 export interface GetDataPayload {
 	host: string
 	endpoint: string
-	params?: Record<string, string | boolean | number>
+	params?: Record<string, DatasetKeyValue | DatasetKeyValue[]>
 	additionalHeaders?: Record<string, string>
 }
 
@@ -14,7 +16,14 @@ const getData = async <T extends unknown>({
 }: GetDataPayload): Promise<T> => {
 	const callUrl = `${host}${endpoint}`
 	const queryParameters = Object.keys(params)
-		.map((key, i) => `${i === 0 ? '?' : '&'}${key}=${String(params[key])}`)
+		.map((key, i) => {
+			if (Array.isArray(params[key])) {
+				return `${i === 0 ? '?' : '&'}${key}=[${String(
+					(params[key] as []).map((keyArrayItem) => keyArrayItem).join(','),
+				)}]`
+			}
+			return `${i === 0 ? '?' : '&'}${key}=${String(params[key])}`
+		})
 		.join('')
 	const response = await fetch(`${callUrl}${queryParameters}`, {
 		...additionalHeaders,
