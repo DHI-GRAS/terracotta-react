@@ -91,14 +91,14 @@ const terracotta = useTerracottaLayer({
 	url: https://www.terracotta-deployment.com,
 	datasets: [ ...datasets ],
 	type: "singleband",
-	queryString: "colormap=binary&stretch_range=[0,1]" //dependable on the type of data
+	queryString: "colormap=binary&stretch_range=[0,1]" // Depends on the type of data
 	...otherTileLayerProps
 })
 
 ```
 ### Props
 
-This is a list of specific props that are related mainly to Terracotta. The rest of the props passed are the same as for the TileLayer and will be applied to the [TileLayer](https://deck.gl/docs/api-reference/geo-layers/tile-layer). 
+List of specific props related mainly to Terracotta. The rest of the props passed are the same as for the TileLayer and will be applied to the [TileLayer](https://deck.gl/docs/api-reference/geo-layers/tile-layer). 
 
 #### `url`*
 The terracotta instance url without the ending "/".
