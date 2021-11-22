@@ -6,15 +6,16 @@
 ![NPM](https://img.shields.io/npm/l/@dhi-gras/terracotta-react)
 [![semantic-release](https://img.shields.io/badge/semantic-release-e10079.svg?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 </div>
+<img src="https://grasdatastorage.blob.core.windows.net/images/tc-logo-banner.svg">
 <h1 align="left">@dhi-gras/terracotta-react</h1>
 
 React implementation of a context wrapper for abstracting away some of the logic around the [Terracotta](https://github.com/DHI-GRAS/terracotta) XYZ tile server.
 
-Terracotta is a pure Python tile server that runs as a WSGI app on a dedicated webserver or as a serverless app on AWS Lambda. It is built on a modern Python 3.6 stack, powered by awesome open-source software such as Flask, Zappa, and Rasterio.
+Terracotta is a pure Python tile server that runs as a WSGI app on a dedicated webserver or as a serverless app on AWS Lambda. It is built on a modern Python 3.6 stack, powered by awesome open-source software such as [Flask](http://flask.pocoo.org), [Zappa](https://github.com/Miserlou/Zappa), and [Rasterio](https://github.com/mapbox/rasterio).
 
 ## Why Terracotta-react
 - It abstracts away the logic around what endpoints you should hit to get the right datasets and display them on a map. All of it through a friendly API.
-- It uses the highly performant and well documented [Deck.gl](https://deck.gl/) based on the WebGL framework.
+- It uses the highly performant [Deck.gl](https://deck.gl/) that is based on the WebGL framework.
 - It includes built-in Typescript definitions, therefore, it prevents unpredictable type errors when used in your app. The types are available by importing them from the package.
 
 ## Prerequisites
