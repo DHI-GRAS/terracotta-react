@@ -6,7 +6,7 @@
 </div>
 <h1 align="left">@dhi-gras/terracotta-react</h1>
 
-React implementation of a context wrapper for abstracting away some of the logic around the [Terracotta](https://terracotta-python.readthedocs.io/en/latest/index.html) XYZ tile server.
+React implementation of a context wrapper for abstracting away some of the logic around the [Terracotta](https://github.com/DHI-GRAS/terracotta) XYZ tile server.
 
 Terracotta is a pure Python tile server that runs as a WSGI app on a dedicated webserver or as a serverless app on AWS Lambda. It is built on a modern Python 3.6 stack, powered by awesome open-source software such as Flask, Zappa, and Rasterio.
 
