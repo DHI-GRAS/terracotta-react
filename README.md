@@ -15,7 +15,7 @@ Terracotta is a pure Python tile server that runs as a WSGI app on a dedicated w
 
 ## Why Terracotta-react
 - It abstracts away the logic around what endpoints you should hit to get the right datasets and display them on a map. All of it through a friendly API.
-- It uses the highly performant [Deck.gl](https://deck.gl/) that is based on the WebGL framework.
+- It uses the highly performant [Deck.gl](https://deck.gl/) based on the WebGL framework.
 - It includes built-in Typescript definitions, therefore, it prevents unpredictable type errors when used in your app. The types are available by importing them from the package.
 
 ## Prerequisites
