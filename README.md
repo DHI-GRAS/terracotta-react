@@ -1,7 +1,9 @@
 
 <div align="left">
 
+[![CI - build & release](https://github.com/DHI-GRAS/terracotta-react/actions/workflows/main.yml/badge.svg)](https://github.com/DHI-GRAS/terracotta-react/actions/workflows/main.yml)
 [![Latest](https://img.shields.io/npm/v/@dhi-gras/terracotta-react/latest)](https://www.npmjs.com/package/@dhi-gras/terracotta-react)
+![NPM](https://img.shields.io/npm/l/@dhi-gras/terracotta-react)
 [![semantic-release](https://img.shields.io/badge/semantic-release-e10079.svg?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 </div>
 <h1 align="left">@dhi-gras/terracotta-react</h1>
