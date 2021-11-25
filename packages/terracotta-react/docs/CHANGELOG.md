@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/DHI-GRAS/terracotta-react/compare/v1.0.2...v1.1.0) (2021-11-25)
+
+
+### Bug Fixes
+
+* **docs:** Add docs for whole repo ([aa80b25](https://github.com/DHI-GRAS/terracotta-react/commit/aa80b253f294635813e14fb6e5492b185a655684))
+
+
+### Features
+
+* **getDatasets:** Add getDatasets method ([9146b44](https://github.com/DHI-GRAS/terracotta-react/commit/9146b446a396ace2785554c872ddd905ec19b693))
+
 ## [1.0.2](https://github.com/DHI-GRAS/terracotta-react/compare/v1.0.1...v1.0.2) (2021-11-11)
 
 
