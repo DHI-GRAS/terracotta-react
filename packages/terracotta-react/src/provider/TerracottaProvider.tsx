@@ -7,7 +7,12 @@ import React, {
 	useCallback,
 } from 'react'
 import getData from '../utils/getData'
-import { Key, ResponseTypeKeys } from './types'
+import {
+	Key,
+	ResponseTypeKeys,
+	ResponseTypeDatasets,
+	GetDatasetsPayload,
+} from './types'
 
 interface TerracottaContextProviderValues {
 	state: {
@@ -17,6 +22,9 @@ interface TerracottaContextProviderValues {
 	actions: {
 		setKeys: (k: Key[] | undefined) => void
 		setIsLoading: (l: boolean) => void
+		getDatasets: (
+			p: GetDatasetsPayload | undefined,
+		) => Promise<ResponseTypeDatasets>
 	}
 }
 
@@ -48,6 +56,25 @@ const TerracottaContextProvider: FC<Props> = ({ children, host }) => {
 		}
 	}, [host])
 
+	const getDatasets = useCallback(
+		async (payload: GetDatasetsPayload | undefined) => {
+			try {
+				setIsLoading(true)
+				return await getData<ResponseTypeDatasets>({
+					host,
+					endpoint: '/datasets',
+					params: payload,
+				})
+			} catch (err) {
+				throw Error(String(err))
+				// console.error(err) // eslint-disable-line no-console
+			} finally {
+				setIsLoading(false)
+			}
+		},
+		[host],
+	)
+
 	useEffect(() => {
 		void handleKeys()
 	}, [handleKeys])
@@ -62,6 +89,7 @@ const TerracottaContextProvider: FC<Props> = ({ children, host }) => {
 				actions: {
 					setKeys,
 					setIsLoading,
+					getDatasets,
 				},
 			}}
 		>
