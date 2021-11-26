@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/DHI-GRAS/terracotta-react/compare/v1.1.0...v1.1.1) (2021-11-26)
+
+
+### Bug Fixes
+
+* **docs:** Add docs as part of the package ([874e2dd](https://github.com/DHI-GRAS/terracotta-react/commit/874e2ddb874354719a838279aebe02342258b9bf))
+
 # [1.1.0](https://github.com/DHI-GRAS/terracotta-react/compare/v1.0.2...v1.1.0) (2021-11-25)
 
 
