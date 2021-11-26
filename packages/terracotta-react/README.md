@@ -121,6 +121,25 @@ const handleDatasets = async () => {
 }
 ```
 
+#### `getMetadata`
+
+A method that returns a Promise by making a call to the `/metadata` endpoint. It can take in an argument containing one of the datasets from the available dataset list. 
+
+```
+const { getMetadata } = useTerracotta()
+
+const handleDatasets = async () => {
+	try{
+		const metadata = await getMetadata({ ...dataset })
+
+		return metadata
+
+	}catch(err){
+		console.error(err)
+	}
+}
+```
+
 # Deck.gl hooks
 
 This package includes a few helper functions that can be used during the implementation of Terracotta and Deck.gl. This readme file should give you an overview of what hooks are available and how to use them.

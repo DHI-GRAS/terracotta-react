@@ -85,7 +85,7 @@ const TerracottaContextProvider: FC<Props> = ({ children, host }) => {
 					.join('')
 				return await getData<ResponseTypeMetadata>({
 					host,
-					endpoint: `${metadataUrl}/metadata`,
+					endpoint: `/metadata${metadataUrl}`,
 				})
 			} catch (err) {
 				throw Error(String(err))
