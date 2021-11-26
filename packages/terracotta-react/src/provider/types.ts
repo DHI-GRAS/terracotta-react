@@ -14,6 +14,10 @@ export interface ResponseTypeDatasets {
 	page: number
 }
 
+export type MessageResponse = {
+	message: string
+}
+
 export interface ResponseTypeMetadata {
 	keys: Dataset
 	bounds: number[]
@@ -25,6 +29,10 @@ export interface ResponseTypeMetadata {
 	percentiles: number[]
 	metadata: Dataset
 }
+
+export type ResponseTypeMetadataWithMessage =
+	| MessageResponse
+	| ResponseTypeMetadata
 
 export type GetMetadataPayload = Dataset
 

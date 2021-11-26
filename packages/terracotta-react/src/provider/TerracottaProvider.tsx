@@ -14,6 +14,8 @@ import {
 	GetDatasetsPayload,
 	Dataset,
 	ResponseTypeMetadata,
+	ResponseTypeMetadataWithMessage,
+	MessageResponse,
 } from './types'
 
 interface TerracottaContextProviderValues {
@@ -83,10 +85,16 @@ const TerracottaContextProvider: FC<Props> = ({ children, host }) => {
 				const metadataUrl = Object.keys(payDataset)
 					.map((datasetKey) => `/${String(payDataset[datasetKey])}`)
 					.join('')
-				return await getData<ResponseTypeMetadata>({
+				const response = await getData<ResponseTypeMetadataWithMessage>({
 					host,
 					endpoint: `/metadata${metadataUrl}`,
 				})
+
+				if ((response as MessageResponse).message) {
+					throw Error(String((response as MessageResponse).message))
+				}
+
+				return response as ResponseTypeMetadata
 			} catch (err) {
 				throw Error(String(err))
 				// console.error(err) // eslint-disable-line no-console
