@@ -12,6 +12,8 @@ import {
 	ResponseTypeKeys,
 	ResponseTypeDatasets,
 	GetDatasetsPayload,
+	Dataset,
+	ResponseTypeMetadata,
 } from './types'
 
 interface TerracottaContextProviderValues {
@@ -22,9 +24,8 @@ interface TerracottaContextProviderValues {
 	actions: {
 		setKeys: (k: Key[] | undefined) => void
 		setIsLoading: (l: boolean) => void
-		getDatasets: (
-			p: GetDatasetsPayload | undefined,
-		) => Promise<ResponseTypeDatasets>
+		getDatasets: (p: GetDatasetsPayload) => Promise<ResponseTypeDatasets>
+		getMetadata: (p: Dataset) => Promise<ResponseTypeMetadata>
 	}
 }
 
@@ -57,13 +58,34 @@ const TerracottaContextProvider: FC<Props> = ({ children, host }) => {
 	}, [host])
 
 	const getDatasets = useCallback(
-		async (payload: GetDatasetsPayload | undefined) => {
+		async (payload: GetDatasetsPayload) => {
 			try {
 				setIsLoading(true)
 				return await getData<ResponseTypeDatasets>({
 					host,
 					endpoint: '/datasets',
 					params: payload,
+				})
+			} catch (err) {
+				throw Error(String(err))
+				// console.error(err) // eslint-disable-line no-console
+			} finally {
+				setIsLoading(false)
+			}
+		},
+		[host],
+	)
+
+	const getMetadata = useCallback(
+		async (payDataset: Dataset): Promise<ResponseTypeMetadata> => {
+			try {
+				setIsLoading(true)
+				const metadataUrl = Object.keys(payDataset)
+					.map((datasetKey) => `/${String(payDataset[datasetKey])}`)
+					.join('')
+				return await getData<ResponseTypeMetadata>({
+					host,
+					endpoint: `${metadataUrl}/metadata`,
 				})
 			} catch (err) {
 				throw Error(String(err))
@@ -90,6 +112,7 @@ const TerracottaContextProvider: FC<Props> = ({ children, host }) => {
 					setKeys,
 					setIsLoading,
 					getDatasets,
+					getMetadata,
 				},
 			}}
 		>
