@@ -128,7 +128,7 @@ A method that returns a Promise by making a call to the `/metadata` endpoint. It
 ```
 const { getMetadata } = useTerracotta()
 
-const handleDatasets = async () => {
+const handleMetadata = async () => {
 	try{
 		const metadata = await getMetadata({ ...dataset })
 
