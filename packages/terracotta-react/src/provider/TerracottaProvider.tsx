@@ -12,6 +12,10 @@ import {
 	ResponseTypeKeys,
 	ResponseTypeDatasets,
 	GetDatasetsPayload,
+	Dataset,
+	ResponseTypeMetadata,
+	ResponseTypeMetadataWithMessage,
+	MessageResponse,
 } from './types'
 
 interface TerracottaContextProviderValues {
@@ -22,9 +26,8 @@ interface TerracottaContextProviderValues {
 	actions: {
 		setKeys: (k: Key[] | undefined) => void
 		setIsLoading: (l: boolean) => void
-		getDatasets: (
-			p: GetDatasetsPayload | undefined,
-		) => Promise<ResponseTypeDatasets>
+		getDatasets: (p: GetDatasetsPayload) => Promise<ResponseTypeDatasets>
+		getMetadata: (p: Dataset) => Promise<ResponseTypeMetadata>
 	}
 }
 
@@ -57,7 +60,7 @@ const TerracottaContextProvider: FC<Props> = ({ children, host }) => {
 	}, [host])
 
 	const getDatasets = useCallback(
-		async (payload: GetDatasetsPayload | undefined) => {
+		async (payload: GetDatasetsPayload) => {
 			try {
 				setIsLoading(true)
 				return await getData<ResponseTypeDatasets>({
@@ -65,6 +68,33 @@ const TerracottaContextProvider: FC<Props> = ({ children, host }) => {
 					endpoint: '/datasets',
 					params: payload,
 				})
+			} catch (err) {
+				throw Error(String(err))
+				// console.error(err) // eslint-disable-line no-console
+			} finally {
+				setIsLoading(false)
+			}
+		},
+		[host],
+	)
+
+	const getMetadata = useCallback(
+		async (payDataset: Dataset): Promise<ResponseTypeMetadata> => {
+			try {
+				setIsLoading(true)
+				const metadataUrl = Object.keys(payDataset)
+					.map((datasetKey) => `/${String(payDataset[datasetKey])}`)
+					.join('')
+				const response = await getData<ResponseTypeMetadataWithMessage>({
+					host,
+					endpoint: `/metadata${metadataUrl}`,
+				})
+
+				if ((response as MessageResponse).message) {
+					throw Error(String((response as MessageResponse).message))
+				}
+
+				return response as ResponseTypeMetadata
 			} catch (err) {
 				throw Error(String(err))
 				// console.error(err) // eslint-disable-line no-console
@@ -90,6 +120,7 @@ const TerracottaContextProvider: FC<Props> = ({ children, host }) => {
 					setKeys,
 					setIsLoading,
 					getDatasets,
+					getMetadata,
 				},
 			}}
 		>

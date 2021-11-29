@@ -4,6 +4,8 @@ import {
 	Key,
 	GetDatasetsPayload,
 	ResponseTypeDatasets,
+	Dataset,
+	ResponseTypeMetadata,
 } from '../provider/types'
 
 export interface UseTerracottaReturn {
@@ -12,18 +14,20 @@ export interface UseTerracottaReturn {
 	getDatasets: (
 		p: GetDatasetsPayload | undefined,
 	) => Promise<ResponseTypeDatasets>
+	getMetadata: (p: Dataset) => Promise<ResponseTypeMetadata>
 }
 
 const useTerracotta = (): UseTerracottaReturn => {
 	const {
 		state: { keys, isLoading },
-		actions: { getDatasets },
+		actions: { getDatasets, getMetadata },
 	} = useContext(TerracottaContext)
 
 	return {
 		keys,
 		isLoading,
 		getDatasets,
+		getMetadata,
 	}
 }
 
