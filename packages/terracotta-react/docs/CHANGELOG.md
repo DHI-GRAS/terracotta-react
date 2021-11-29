@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/DHI-GRAS/terracotta-react/compare/v1.1.1...v1.2.0) (2021-11-29)
+
+
+### Bug Fixes
+
+* **getMetadata:** Better error handling ([b0ddfb9](https://github.com/DHI-GRAS/terracotta-react/commit/b0ddfb9e0f21e0268b5ab6735eacd49b96be749a))
+
+
+### Features
+
+* **getMetadata:** Add getMetadata method and docs ([5c7e2d7](https://github.com/DHI-GRAS/terracotta-react/commit/5c7e2d73b3ce783633353a957eaa15785f30f5b3))
+
 ## [1.1.1](https://github.com/DHI-GRAS/terracotta-react/compare/v1.1.0...v1.1.1) (2021-11-26)
 
 
