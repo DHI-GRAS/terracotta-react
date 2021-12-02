@@ -27,11 +27,11 @@ Check the `peerDependencies` of the [terracotta-react package](./packages/terrac
 Install the package
 
 ```
-yarn add @dhi-gras/terracotta-provider
+yarn add @dhi-gras/terracotta-react
 
 // or
 
-npm install @dhi-gras/terracotta-provider
+npm install @dhi-gras/terracotta-react
 ```
 
 # TerracottaContextProvider
