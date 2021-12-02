@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/DHI-GRAS/terracotta-react/compare/v1.2.1...v1.2.2) (2021-12-02)
+
+
+### Bug Fixes
+
+* **useRasterLayer:** fix return type ([3dbe213](https://github.com/DHI-GRAS/terracotta-react/commit/3dbe213ef20c10a0e44f2f760a190369d476a2bb))
+
 ## [1.2.1](https://github.com/DHI-GRAS/terracotta-react/compare/v1.2.0...v1.2.1) (2021-12-02)
 
 
