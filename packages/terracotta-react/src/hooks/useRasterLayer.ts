@@ -6,7 +6,7 @@ export type RasterLayer<T> = TileLayerProps<T>
 
 const useRasterLayer = ({
 	...otherProps
-}: RasterLayer<unknown>): TileLayer<unknown> | undefined =>
+}: RasterLayer<unknown>): TileLayer<unknown> =>
 	new TileLayer({
 		minZoom: 0,
 		pickable: true,
