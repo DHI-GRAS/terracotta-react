@@ -219,3 +219,55 @@ The type is related to the type of data that the user would like to render. The 
 The queryString is used to specify the ranges you would like to see for the Red, Green or Blue band through the r_range, b_range, g_range query parameters. 
 
 You can also specify the [colormap](https://terracotta-python.readthedocs.io/en/latest/reference/colormaps.html) and the stretch_range in case of 'singleband' or to specify the colors for the categorical data.
+
+
+
+# Terracotta specific query parameters
+
+In order to render the right colormaps for your data, some specific combination of query parameters must be set.
+
+## RGB layers
+
+For rendering RGB layers, we have to specify the following:
+
+- The bands respective to red, green and blue colors.
+- The ranges respective to each band.
+
+```
+const rRangeValue = encodeURI([0,1000])
+const gRangeValue = encodeURI([0,1000])
+const bRangeValue = encodeURI([0,1000])
+
+`.../{z}/{x}/{y}.png?r=B04&g=B03&b=B02&r_range=${rRangeValue}&g_range=${gRangeValue}&b_range=${bRangeValue}`
+```
+
+## Singleband layers
+
+For rendering singleband layers, we have the following use-cases
+
+### Cateogorical data
+
+For categorical data we must specify:
+
+- The `explicit` colormap
+- The `explicit_color_map` values
+
+```
+const categoricalColors = encodeURI({ "1": "B9D400", "2": "001BCB" })
+
+`.../{z}/{x}/{y}.png?colormap=explicit&explicit_color_map=${categoricalColors}`
+```
+
+### Continuous data
+
+For continuous data we must specify:
+
+- The desired `colormap` from the list of [available colormaps](https://terracotta-python.readthedocs.io/en/latest/reference/colormaps.html).
+- The `stretch_range` for the range of values to be displayed.
+
+```
+const stretchContinuousColor = encodeURI([0,1])
+const continuousColor = 'autumn'
+
+`.../{z}/{x}/{y}.png?colormap=autumn&stretch_range=${stretchContinuousColor}`
+```
