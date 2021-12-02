@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/DHI-GRAS/terracotta-react/compare/v1.2.0...v1.2.1) (2021-12-02)
+
+
+### Bug Fixes
+
+* **docs:** Fix package import for usage ([b236b8a](https://github.com/DHI-GRAS/terracotta-react/commit/b236b8abd3fc59b4bd96832f3aa7874080e0934f))
+
 # [1.2.0](https://github.com/DHI-GRAS/terracotta-react/compare/v1.1.1...v1.2.0) (2021-11-29)
 
 
