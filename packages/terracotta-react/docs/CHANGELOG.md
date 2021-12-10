@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/DHI-GRAS/terracotta-react/compare/v1.2.2...v1.2.3) (2021-12-10)
+
+
+### Bug Fixes
+
+* **deckgl-typings:** Move the typing of deck.gl from dep to devDep ([9faad3c](https://github.com/DHI-GRAS/terracotta-react/commit/9faad3c5fccbc9507b5518be1317ac8d676f2cbb))
+
 ## [1.2.2](https://github.com/DHI-GRAS/terracotta-react/compare/v1.2.1...v1.2.2) (2021-12-02)
 
 
