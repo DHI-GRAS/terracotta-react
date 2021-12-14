@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/DHI-GRAS/terracotta-react/compare/v1.2.3...v1.3.0) (2021-12-14)
+
+
+### Features
+
+* **docs:** Add docs for queryParams ([3df9d55](https://github.com/DHI-GRAS/terracotta-react/commit/3df9d55ecd7c0e901fc8ecb9b617515a1ff21e27))
+
 ## [1.2.3](https://github.com/DHI-GRAS/terracotta-react/compare/v1.2.2...v1.2.3) (2021-12-10)
 
 
