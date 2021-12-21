@@ -144,25 +144,6 @@ const handleMetadata = async () => {
 
 This package includes a few helper functions that can be used during the implementation of Terracotta and Deck.gl. This readme file should give you an overview of what hooks are available and how to use them.
 
-## useRasterLayer
-
-The hook is an implementation of [TileLayer](https://deck.gl/docs/api-reference/geo-layers/tile-layer) and [BitmapLayer]('https://deck.gl/docs/api-reference/layers/bitmap-layer') in order to render and cache raster data progressively on the map, taking into account the bounding box of the viewport that the user is currently viewing. 
-
-### Usage
-
-```
-import { useRasterLayer } from "@dhi-gras/terracotta-react";
-
-const rasterLayer = useRasterLayer({
-	id: 'post-classification-terracotta-layer',
-	data: https://www.terracotta-deployment.com/key1/key2/{z}/{x}/{y}.png,
-	...otherTileLayerProps
-})
-
-```
-
-The component is taking in the same properties as the [TileLayer](https://deck.gl/docs/api-reference/geo-layers/tile-layer).
-
 ## useTerracottaLayer
 
 The hook applies the same concept as the `useRasterLayer`, and at the same time it wraps up some of the logic around rendering the terracotta raster/s.
@@ -221,6 +202,22 @@ The queryString is used to specify the ranges you would like to see for the Red,
 You can also specify the [colormap](https://terracotta-python.readthedocs.io/en/latest/reference/colormaps.html) and the stretch_range in case of 'singleband' or to specify the colors for the categorical data.
 
 
+## useRasterLayer
+
+The package exports a generic layer `useRasterLayer` that can be used in conjunction with any type of XYZ server. The layer takes in the same properties as For readming more about it, you can visit the [TileLayer](https://deck.gl/docs/api-reference/geo-layers/tile-layer) documentation.
+
+### Usage
+
+```
+import { useRasterLayer } from "@dhi-gras/terracotta-react";
+
+const rasterLayer = useRasterLayer({
+	id: 'post-classification-terracotta-layer',
+	data: https://www.terracotta-deployment.com/key1/key2/{z}/{x}/{y}.png,
+	...otherTileLayerProps
+})
+
+```
 
 # Terracotta specific query parameters
 
