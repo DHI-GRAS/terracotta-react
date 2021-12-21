@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/DHI-GRAS/terracotta-react/compare/v1.3.0...v1.3.1) (2021-12-21)
+
+
+### Bug Fixes
+
+* **docs:** Change layer priority in the docs ([6831bd4](https://github.com/DHI-GRAS/terracotta-react/commit/6831bd49330b7881dc845de50c96c6ebce57861d))
+
 # [1.3.0](https://github.com/DHI-GRAS/terracotta-react/compare/v1.2.3...v1.3.0) (2021-12-14)
 
 
