@@ -7,7 +7,7 @@
 [![semantic-release](https://img.shields.io/badge/semantic-release-e10079.svg?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 </div>
 <img src="https://grasdatastorage.blob.core.windows.net/images/tc-logo-banner.svg">
-<h1 align="left">@dhi-gras/terracotta-reacttt</h1>
+<h1 align="left">@dhi-gras/terracotta-react</h1>
 
 React implementation of a context wrapper for abstracting away some of the logic around the [Terracotta](https://github.com/DHI-GRAS/terracotta) XYZ tile server.
 
